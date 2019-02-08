@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 from .models import Message
 from rest_framework import viewsets
-from api.serializer import
+from api.serializer import MessageSerializer
 
 
 #views.py with a ChatIndex view.
