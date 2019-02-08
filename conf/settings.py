@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'chat',
-    'account'
+    'account',
     'rest_framework'
 ]
 
@@ -103,9 +103,9 @@ DATABASES = {
 
         'default': {
                'ENGINE': 'django.db.backends.postgresql',
-               'NAME': 'mydatabase',
-               'USER': 'mydatabaseuser',
-               'PASSWORD': 'mypassword',
+               'NAME': 'chat',
+               'USER': 'chat',
+               'PASSWORD': '',
                'HOST': '127.0.0.1',
                'PORT': '5432',
         }
