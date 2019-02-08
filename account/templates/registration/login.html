@@ -6,6 +6,7 @@
   <h2>Login</h2>
   <form method="post">
     {% csrf_token %}
+      <input type="hidden" value="{% url 'chat' %}" name='next'>
     {{ form.as_p }}
     <button type="submit">Login</button>
   </form>

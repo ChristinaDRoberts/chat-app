@@ -1,19 +1,18 @@
 from django.shortcuts import render
 
 
-from .models import Message
-from rest_framework import viewsets
-from api.serializer import MessageSerializer
 
+
+from django.views.generic import TemplateView
 
 #views.py with a ChatIndex view.
 
-class ChatIndex(viewsets.ModelViewSet):
-    queryset = Message.objects.all()
 
 
 
 
 
+class ChatIndex(TemplateView):
+    template_name = 'chat.html'
 
 

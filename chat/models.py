@@ -12,4 +12,4 @@ class Message(models.Model):
     created = models.DateField()
 
     def __str__(self):
-        return self.text
+        return self.user.username
