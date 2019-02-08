@@ -23,7 +23,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='chat.html'), name='chat'),
     path('', include("api.urls")),
-    path('', include('account.urls')),
+    path('accounts/', include('account.urls')),
+
+    # what does this path do
+    # path('accounts/', include('django.contrib.auth.urls')),
+
 
 
 ]
