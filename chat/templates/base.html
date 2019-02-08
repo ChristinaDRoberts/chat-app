@@ -2,19 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>{% block title %}Django Simple Login{% endblock %}</title>
+  <title>{% block title %}Chat App{% endblock %}</title>
 </head>
 <body>
   <header>
-  <h1>TESTING BASE HTML</h1>
+  <h1>Welcome to Christinas Chat !</h1>
 
     {% if user.is_authenticated %}
       Hi {{ user.username }}!
 {#      <a href="{% url 'logout' %}">logout</a>#}
-        <p>test</p>
+        <p></p>
     {% else %}
 {#      <a href="{% url 'login' %}">login</a>#}
-        <p>test</p>
+        <p></p>
     {% endif %}
   </header>
   <hr>
