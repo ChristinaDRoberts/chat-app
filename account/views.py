@@ -29,3 +29,6 @@ class SignUp(generic.CreateView):
 
 
 
+
+
+
