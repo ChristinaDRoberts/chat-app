@@ -9,9 +9,6 @@ from django.views.generic import TemplateView
 
 
 
-
-
-
 class ChatIndex(TemplateView):
     template_name = 'chat.html'
 
