@@ -48,13 +48,21 @@
                         </span>
                             <div class="chat-body clearfix">
                                 <div class="header">
-                                    <strong class="primary-font">will be user name</strong> <small class="pull-right text-muted">
+                                    <strong class="primary-font">{{ user.username }}</strong> <small class="pull-right text-muted">
                                         <span class="glyphicon glyphicon-time"></span>timestamp</small>
                                 </div>
-                                <p> will be message object</p>
+                                <p> {{ user.text }}</p>
                             </div>
                         </li>
 {#         #*************end of section that will be made into a for loop*************#}
+
+
+
+
+
+
+
+
                         <li class="right clearfix"><span class="chat-img pull-right">
                             <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
                         </span>
@@ -95,7 +103,7 @@
                     <div class="input-group">
                         <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
                         <span class="input-group-btn">
-                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                            <button class="btn btn-warning btn-sm post" id="btn-chat">
                                 Send</button>
                         </span>
                     </div>

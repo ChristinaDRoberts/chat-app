@@ -6,7 +6,6 @@ from api.views import ApiViewSet
 urlpatterns = [
   # path('api/message/', views.ChatIndex.as_view(), name='apidata')
   # path('api/', include("api.urls")),
-  path('message/', ApiViewSet.as_view({'serialize_class': 'queryset'}))
+  path('message/', ApiViewSet.as_view({'get' : 'list', 'post': 'create'}))
 
 ]
-
