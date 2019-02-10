@@ -119,7 +119,7 @@
             ],
             "version": "==2018.9"
         },
-        
+
         "whitenoise": {
             "hashes": [
                 "sha256:118ab3e5f815d380171b100b05b76de2a07612f422368a201a9ffdeefb2251c1",

@@ -37,9 +37,9 @@
             // i want these to go into my chat template but they are appending onto bottom
             // of body bc thats what im telling it to do here !
             // this is printing out the messages on browser
-          $('body').append('<p>' + Message.text + '</p>');
+          $('.message').append('<p>' + Message.text + '</p>');
           // this is printing out the # the user is in browser
-          $('body').append('<p>' + Message.user + '</p>');
+          $('.').append('<p>' + Message.user + '</p>');
 
         })
       }
