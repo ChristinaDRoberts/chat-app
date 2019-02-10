@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c89ebb21482749f9f52d8084d19b75736be9dd5437c575ed49927bda03a750c1"
+            "sha256": "4f9d4b6103aad933e3e905662a1466ba21c8ce7c6823e0212b71308f8ca66ffc"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -119,6 +119,7 @@
             ],
             "version": "==2018.9"
         },
+        
         "whitenoise": {
             "hashes": [
                 "sha256:118ab3e5f815d380171b100b05b76de2a07612f422368a201a9ffdeefb2251c1",

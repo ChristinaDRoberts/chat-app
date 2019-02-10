@@ -8,6 +8,6 @@ from api.views import ApiViewSet
 
 urlpatterns = [
 
-    path('', views.ChatIndex.as_view())
+    path('', views.ChatIndex.as_view(),name='chat')
          ]
 
