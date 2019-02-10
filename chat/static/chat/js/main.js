@@ -57,38 +57,38 @@
 
 
 
-$(document).ready(function() {
-
-    const BASE_URL = 'http://localhost:/.js';
-
-
-    $.ajax({
-        url: `${'api/message/'}`,
-        dataType: 'jsonp',
-        method: 'GET',
-
-
-        success: function (response) {
-            // console.log('response', response);
-            var source = $("#entry-template").html();
-            var template = Handlebars.compile(source);
-            var context = {
-                results: response.results
-            }
-            var html = template(context);
-
-            $('.row').html(html);
-        },
-
-
-        error: function (xhr) {
-            console.log('uh oh, something went wrong', xhr.status);
-        }
-
-    })
-
-});
+// $(document).ready(function() {
 //
+//     const BASE_URL = 'http://localhost:/.js';
+//
+//
+//     $.ajax({
+//         url: `${'api/message/'}`,
+//         dataType: 'jsonp',
+//         method: 'GET',
+//
+//
+//         success: function (response) {
+//             // console.log('response', response);
+//             var source = $("#entry-template").html();
+//             var template = Handlebars.compile(source);
+//             var context = {
+//                 results: response.results
+//             }
+//             var html = template(context);
+//
+//             $('.row').html(html);
+//         },
+//
+//
+//         error: function (xhr) {
+//             console.log('uh oh, something went wrong', xhr.status);
+//         }
+//
+//     })
+//
+// });
+// //
 
 // var chatList = document.getElementByID(‘msg-list-div’);
 // chatlist.scrollTop = chatList.scrollHeight;
