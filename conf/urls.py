@@ -21,9 +21,10 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='chat.html'), name='chat'),
-    path('', include("api.urls")),
+    # path('', TemplateView.as_view(template_name='chat.html'), name='chat'),
     path('accounts/', include('account.urls')),
+    path('api/', include("api.urls")),
+    path('', include("chat.urls"))
 
     # what does this path do
     # path('accounts/', include('django.contrib.auth.urls')),

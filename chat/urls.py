@@ -7,7 +7,11 @@ from . import views
 urlpatterns = [
 
     path('', views.ChatIndex.as_view({
-            'get': 'list',  # GET method should list objects
-            'post': 'create',  # POST method should create object
-        }), name='chat'),
+            'get': queryset,  # GET method should list objects
+            'post': data,  # POST method should create object
+    }))
     ]
+# {
+#             'get': queryset,  # GET method should list objects
+#             'post': data,  # POST method should create object
+#         }

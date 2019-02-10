@@ -1,8 +1,5 @@
 from django.shortcuts import render
 
-
-
-
 from django.views.generic import TemplateView
 
 #views.py with a ChatIndex view.

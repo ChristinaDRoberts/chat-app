@@ -1,10 +1,11 @@
 
-from django.urls import path
+from django.urls import path, include
 from chat import views
 
-#come back - urls.py with a route configured for api/message/
-
 urlpatterns = [
-  path('api/message', views.ChatIndex.as_view())
+  # path('api/message/', views.ChatIndex.as_view(), name='apidata')
+  # path('api/', include("api.urls")),
+  path('api/message/', views.ChatIndex.as_view())
 
 ]
+
