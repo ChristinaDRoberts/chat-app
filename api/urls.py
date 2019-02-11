@@ -1,11 +1,10 @@
 
-from django.urls import path, include
-from chat import views
+from django.urls import path
 from api.views import ApiViewSet
 
 urlpatterns = [
-  # path('api/message/', views.ChatIndex.as_view(), name='apidata')
-  # path('api/', include("api.urls")),
-  path('message/', ApiViewSet.as_view({'get' : 'list', 'post': 'create'}))
+ # since we are looking for json data from our api we need to have our message route
+ # use the ApiViewSet
+  path('message/', ApiViewSet.as_view({'get': 'list', 'post': 'create'}))
 
 ]

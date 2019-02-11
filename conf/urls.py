@@ -20,14 +20,15 @@ from django.contrib import admin
 # from . import views
 
 urlpatterns = [
+    # makes the localhost:8000/admin route
     path('admin/', admin.site.urls),
-    # path('', TemplateView.as_view(template_name='chat.html'), name='chat'),
+    # prefixes all urls in accounts.url with "accounts" like localhost:8000/accounts
     path('accounts/', include('account.urls')),
+
     path('api/', include("api.urls")),
     path('', include("chat.urls"))
 
-    # what does this path do
-    # path('accounts/', include('django.contrib.auth.urls')),
+
 
 
 

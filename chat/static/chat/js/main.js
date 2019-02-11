@@ -1,109 +1,96 @@
 // javascript to make the ajax requests and set interval to 30 seconds
 //
 //
-(function($){
-  $(function(){
-    console.log('Working!');
+(function($) {
+    $(function () {
+        console.log('Working!');
 
-    // You need to send a CSRF Token when POSTing
-    // You do this by adding this to your project
-    // https://docs.djangoproject.com/en/2.1/ref/csrf/#setting-the-token-on-the-ajax-request
-    var csrftoken = $("[name=csrfmiddlewaretoken]").val();
-    function csrfSafeMethod(method) {
-        // these HTTP methods do not require CSRF protection
-        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-    }
-    $.ajaxSetup({
-        beforeSend: function(xhr, settings) {
-            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        // You need to send a CSRF Token when POSTing
+        // You do this by adding this to your project
+        // https://docs.djangoproject.com/en/2.1/ref/csrf/#setting-the-token-on-the-ajax-request
+        var csrftoken = $("[name=csrfmiddlewaretoken]").val();
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            beforeSend: function (xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
             }
+        });
+
+        // AJAX Request to get a list of items
+        // A string containing the URL to which the request is sent.
+        //   in search bar it automatically has localhost:8000 before it
+        $.ajax('/api/message/', {
+            'dataType': 'json',
+            'error': function (resp, err) {
+                console.log(resp, err)
+            },
+
+
+            'success': function (data) {
+                // var source   = document.getElementById(".innerHTML;
+                // var template = Handlebars.compile(source);
+
+                // show me the data we are recieving in the console
+                console.log('data', data);
+
+                data2 = data.reverse()
+                data2.forEach(showMessageItem);
+            },
+
+        });
+
+
+        function showMessageItem(Message) {
+            $('body').append('<p>' + Message.text + '</p>');
+            $('body').append('<p>' + Message.User + '</p>');
+            $('body').append('<p>' + Message.created + '</p>');
+
+            $('body').append('<hr/>');
+
+
+
+
+
         }
+
+
+
+
+
+        // on click event (submit button) post the new message and username to database
+        // Register event handler on the .post button
+        $('.add_message_form').on('submit', function (event) {
+            var messageUserSent = $('#message_of_user').val();
+            event.preventDefault();
+            console.log('add message');
+            console.log(messageUserSent)
+
+            // POST ajax request to actually create the message
+            $.ajax('/api/message/', {
+                'method': 'POST',
+                'data': {'text': messageUserSent},
+
+                'success': function (data) {
+                    console.log('success!');
+                    showMessageItem(data);
+                },
+                'error': function () {
+                    console.log("go back and fix it")
+                }
+            });
+        });
+
     });
 
-    // AJAX Request to get a list of items
-    // A string containing the URL to which the request is sent.
-    //   in search bar it automatically has localhost:8000 before it
-    $.ajax('/api/message/', {
-        'dataType': 'json',
-        'error': function(resp, err){console.log(resp, err)},
-        'success': function (data) {
-            // show me the data we are recieving in the console
-        console.log('data', data);
-        console.log('Way to go Christina, you ARE getting it !')
-
-    // a kind of for loop to return each message
-        data.forEach(function(Message){
-            // i want these to go into my chat template but they are appending onto bottom
-            // of body bc thats what im telling it to do here !
-            // this is printing out the messages on browser
-          $('.message').append('<p>' + Message.text + '</p>');
-          // this is printing out the # the user is in browser
-          $('.').append('<p>' + Message.user + '</p>');
-
-        })
-      }
-    });
-
-    // on click event (submit button) post the new message and username to database
-    // Register event handler on the .post button
-    $('.post').on('click', function(){
-
-      // POST ajax request to actually creat the message
-      $.ajax('/api/message/', {
-        'method': 'POST',
-        'data': {'user': ' user.username', 'message': 'user.message'},
-
-        'success': function(data) {
-          console.log('success!');
-        }
-      });
-    });
-
-  });
 }(jQuery));
+// semicolons come at end of expressions
 
 
 
-
-// $(document).ready(function() {
-//
-//     const BASE_URL = 'http://localhost:/.js';
-//
-//
-//     $.ajax({
-//         url: `${'api/message/'}`,
-//         dataType: 'jsonp',
-//         method: 'GET',
-//
-//
-//         success: function (response) {
-//             // console.log('response', response);
-//             var source = $("#entry-template").html();
-//             var template = Handlebars.compile(source);
-//             var context = {
-//                 results: response.results
-//             }
-//             var html = template(context);
-//
-//             $('.row').html(html);
-//         },
-//
-//
-//         error: function (xhr) {
-//             console.log('uh oh, something went wrong', xhr.status);
-//         }
-//
-//     })
-//
-// });
-// //
-
-// var chatList = document.getElementByID(‘msg-list-div’);
-// chatlist.scrollTop = chatList.scrollHeight;
-//
-//
-// $.get( "ajax/chat.html", function( data ) {
-//   $( ".result" ).html( data );
-//   alert( "Load was performed." );
-// });
