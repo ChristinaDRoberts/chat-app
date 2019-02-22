@@ -74,9 +74,9 @@ After completing this assignment, you be able to effectively use
 * The list of messages should update with new messages without refreshing the page.
   **Hint:** use a `setInterval` to fetch your json list every 30 seconds or so.
 
-![image](login.png)
+![image](chat/static/chat/images/login.png)
 
-![image](chat.png)
+![image](chat/static/chat/images/chat.png)
 
 
 ## Hey Mikey, I Think He Likes It Mode

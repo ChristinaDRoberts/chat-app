@@ -1,0 +1,54 @@
+{#The list of messages should update with new messages without refreshing the page. Hint: use a setInterval to fetch #}
+{#your json list every 30 seconds or so.#}
+
+{#I should be able to create messages that are tagged with the time and my username#}
+
+{#build out html to have a box that the chat ajax request data objects populate#}
+ {% extends "base.html" %}
+{%  load static %}
+    <title>Let the Good Ideas Roll</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+{% block content %}
+
+
+
+
+<div class="container">
+
+    <form class="add_message_form">
+        <input type="text" name="words" id="message_of_user"/>
+        <input class="post" id="thePost"  type="submit" value="Add Message"/>
+
+    </form>
+
+
+</div>
+
+<div>
+    <ul>
+        <li></li>
+
+    </ul>
+</div>
+
+
+
+{%  csrf_token %}
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
