@@ -48,19 +48,14 @@
 
 
         function showMessageItem(Message) {
-            $('body').append('<p>' + Message.text + '</p>');
-            $('body').append('<p>' + Message.User + '</p>');
-            $('body').append('<p>' + Message.created + '</p>');
+            var $li = $('<li></li>');
+            $li.append('<p>' + Message.text + '</p>');
+            $li.append('<p>' + Message.user.username + '</p>');
+            $li.append('<p>' + Message.created + '</p>');
+            $li.append('<hr/>');
 
-            $('body').append('<hr/>');
-
-
-
-
-
+            $('ul').prepend($li);
         }
-
-
 
 
 
@@ -78,6 +73,8 @@
                 'data': {'text': messageUserSent},
 
                 'success': function (data) {
+                    $('#message_of_user').val('');
+
                     console.log('success!');
                     showMessageItem(data);
                 },

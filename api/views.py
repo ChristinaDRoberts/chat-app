@@ -13,7 +13,7 @@ from django.utils.timezone import now
 class ApiViewSet(viewsets.ModelViewSet):
 
     serializer_class = MessageSerializer
-    queryset = Message.objects.all()
+    queryset = Message.objects.all().order_by('-id')[:10]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user, created=now())
