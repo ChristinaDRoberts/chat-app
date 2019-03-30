@@ -65,7 +65,7 @@
             var messageUserSent = $('#message_of_user').val();
             event.preventDefault();
             console.log('add message');
-            console.log(messageUserSent)
+            console.log(messageUserSent);
 
             // POST ajax request to actually create the message
             $.ajax('/api/message/', {

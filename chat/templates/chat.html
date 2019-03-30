@@ -12,17 +12,48 @@
 
 
 
+{#exampleFormControlTextarea2#}
+
 
 <div class="container">
+{#<form class="add_message_form">#}
+{#  <div class="row justify-content-md-center form-group">#}
+{#    <div class="col col-lg-6">#}
+{#        <input  class="user-message"   type="text" name="words" id="message_of_user"/>#}\
+{#        <form class="add_message_form">#}
+{#  <label for="exampleFormControlTextarea2">Create Your Message</label>#}
+{#            <textarea class="form-control rounded-0" id="message_of_user" rows="3"></textarea>#}
+{#         <input class="post-button" id="thePost"  type="submit" value="Add Message"/>#}
+{#        </form>#}
+{#</div>#}
 
+
+{#<div class="md-form">#}
+{#  <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>#}
+{#  <label for="form7">Material textarea</label>#}
+{#</div>#}
+<!--Textarea with icon prefix-->
+{#<div class="md-form">#}
+{#  <i class="fas fa-pencil-alt prefix"></i>#}
+{#  <textarea id="form10" class="md-textarea form-control" rows="3"></textarea>#}
+{#  <label for="form10">Icon Prefix</label>#}
+{#</div>#}
+{#    </div>#}
+
+{#    <div class="col col-lg-2">#}
+{#      <input class="post-button" id="thePost"  type="submit" value="Add Message"/>#}
+{#    </div>#}
+{#  </div>#}
     <form class="add_message_form">
-        <input type="text" name="words" id="message_of_user"/>
-        <input class="post" id="thePost"  type="submit" value="Add Message"/>
-
+      <div class="row justify-content-md-center form-group">
+{#        <input  class="user-message"   type="text" name="words" id="message_of_user"/>#}
+          <textarea class="user-message form-control rounded-0" id="message_of_user" rows="3"></textarea>
+        <input class="post-button" id="thePost"  type="submit" value="Add Message"/>
+      </div>
     </form>
 
 
-</div>
+{#</div>#}
 
 <div>
     <ul>
