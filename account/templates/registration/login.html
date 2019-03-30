@@ -10,5 +10,6 @@
       <input type="hidden" value="{% url 'chat' %}" name='next'>
     {{ form.as_p }}
     <button type="submit"> Login </button>
+  <button type="submit"><a href="{% url 'account:login' %}">Sign up</a></button>
   </form>
 {% endblock %}

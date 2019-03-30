@@ -5,5 +5,6 @@
 {% block content %}
   <h2>Logged out</h2>
   <p>You have been successfully logged out.</p>
-{#  <p><a href="{% url 'login' %}">Log in</a> again.</p>#}
+  <button type="submit"><a href="{% url 'account:login' %}">Log In Again</a></button>
+    <button type="submit"><a href="{% url 'account:signup' %}">Sign up A New Account</a></button>
 {% endblock %}
