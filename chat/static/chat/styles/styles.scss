@@ -2,8 +2,10 @@ h1{
   font-size: 60px;
 }
 
-
-header{
+.whole{
+  background-color: lightgray;
+}
+.welcome-header{
   text-align: center;
   border: 4px solid black;
   background-image: linear-gradient(to right,  cyan, aquamarine);
@@ -11,8 +13,8 @@ header{
 
 
 
-.content{
-background-image: linear-gradient(to right, rgba(255,50,0,0), rgba(255,0,0,1));
+.each-message{
+background-image: linear-gradient(to right, rgba(255,0,0,0.5), rgba(255,50,0,0));
 }
 
 .mainbox{
@@ -22,13 +24,23 @@ background-image: linear-gradient(to right, rgba(255,50,0,0), rgba(255,0,0,1));
 
 
 #message_of_user{
-    width: 70%;
+    //width: 70%;
+  //display: inline-block;
+}
 
+li{
+  list-style: none;
 }
 
 p{
-  margin-left: 50px;
-  margin-right: 50px;
+
+  display: inline-block;
+  margin: 3%;
+}
+
+.user-timestamp{
+  display: inline-block;
+  float: right;
 }
 //.add_message_form{
 //    border: 10px solid red;

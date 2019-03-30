@@ -40,7 +40,7 @@
                 // show me the data we are recieving in the console
                 console.log('data', data);
 
-                data2 = data.reverse()
+                data2 = data.reverse();
                 data2.forEach(showMessageItem);
             },
 
@@ -48,10 +48,9 @@
 
 
         function showMessageItem(Message) {
-            var $li = $('<li></li>');
-            $li.append('<p>' + Message.text + '</p>');
-            $li.append('<p>' + Message.user.username + '</p>');
-            $li.append('<p>' + Message.created + '</p>');
+            var $li = $('<li class="each-message"></li>');
+            $li.append('<p class="actual-message">' + Message.text + '</p>');
+            $li.append('<p class="user-timestamp">' + Message.user.username +"----"+  Message.created + '</p>');
             $li.append('<hr/>');
 
             $('ul').prepend($li);
