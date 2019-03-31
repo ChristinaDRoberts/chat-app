@@ -66,30 +66,41 @@ form {
 }
 
 .welcome-header {
+  position: relative;
+  color: #35343d;
   text-align: center;
   border: 2px solid black;
   padding: 10px;
   margin: 5%;
   border-radius: 50px 50px;
-  background-image: linear-gradient(to right, rgba(41, 64, 138, 0.5), whitesmoke, rgba(41, 64, 138, 0.5));
+  background-image: linear-gradient(to right, rgba(41, 64, 138, 0.8), whitesmoke, rgba(41, 64, 138, 0.8));
+}
+
+.name {
+  color: #35343d;
+  position: relative;
 }
 
 .user-message {
   border-radius: 50px 50px;
+  position: relative;
 }
 
 #thePost {
   margin-top: 3%;
   margin-bottom: 4%;
+  position: relative;
 }
 
 .input-message {
   width: 60%;
   margin: 0 auto;
+  position: relative;
 }
 
 .actual-message {
   font-size: 25px;
+  position: relative;
 }
 
 p {
@@ -102,6 +113,7 @@ p {
   padding: 10px;
   border-radius: 50px 20px;
   margin: 10px;
+  position: relative;
 }
 
 .main {
@@ -113,15 +125,28 @@ p {
   background-position: center center;
 }
 
+.main:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+}
+
 #message_of_user {
   display: block;
+  position: relative;
 }
 
 li {
   list-style: none;
+  position: relative;
 }
 
 p {
+  position: relative;
   margin: 3%;
 }
 

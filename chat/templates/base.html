@@ -14,10 +14,10 @@
 <main class="main">
   <header class="welcome-header">
 
-  <h1>Welcome to Christina's Chat !</h1>
+  <h1>Carolina Chat </h1>
 
     {% if user.is_authenticated %}
-      Hi {{ user.username }}!
+     <h3 class="name"> Hi {{ user.username }}!</h3>
 {#      <a href="{% url 'logout' %}">logout</a>#}
 
     {% else %}
