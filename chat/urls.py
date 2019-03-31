@@ -7,6 +7,6 @@ from . import views
 
 urlpatterns = [
 
-    path('chat/', views.ChatIndex.as_view(),name='chat')
+    path('chat/', views.ChatIndex.as_view(), name='chat')
          ]
 
