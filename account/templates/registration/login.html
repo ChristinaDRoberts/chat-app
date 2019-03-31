@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'registration/base.html' %}
 {%  load static %}
 
 {% block title %}Login To The Chat !{% endblock %}
@@ -9,6 +9,7 @@
     {% csrf_token %}
       <input type="hidden" value="{% url 'chat' %}" name='next'>
     {{ form.as_p }}
-    <button type="submit">Login</button>
+    <button type="submit"> Login </button>
+  <button type="submit"><a href="{% url 'account:login' %}">Sign up</a></button>
   </form>
 {% endblock %}

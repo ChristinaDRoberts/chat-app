@@ -9,7 +9,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from . import views
 from django.urls import path
 
-app_name = "users"
+app_name = "account"
 
 urlpatterns = [
   path('login/', LoginView.as_view(template_name='registration/login.html'), name="login"),

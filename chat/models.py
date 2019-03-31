@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+# from django.contrib.humanize.templatetags.humanize import naturaltime
+
+
 
 
 #get_user_model is a built in contrib "auth" app
