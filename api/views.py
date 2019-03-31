@@ -16,7 +16,7 @@ from rest_framework import mixins
 #         return  # To not perform the csrf check previously happening
 
 
-class ApiViewSet(viewsets.ModelViewSet, mixins.RetrieveModelMixin):
+class ApiViewSet(viewsets.ModelViewSet):
 
     serializer_class = MessageSerializer
     queryset = Message.objects.all().order_by('-id')[:10]

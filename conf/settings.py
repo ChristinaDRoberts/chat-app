@@ -157,5 +157,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 
-LOGIN_REDIRECT_URL = '/chat/'
+LOGIN_REDIRECT_URL = ' '
 LOGOUT_REDIRECT_URL = '/login'
