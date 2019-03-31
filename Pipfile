@@ -14,6 +14,7 @@ pillow = "*"
 djangorestframework = "*"
 humanize = "*"
 dj-database-url = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.7"
