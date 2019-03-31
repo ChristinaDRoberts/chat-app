@@ -17,7 +17,7 @@ from django.views.generic import TemplateView
 
 class SignUp(generic.CreateView):
    form_class = SignUpForm
-   success_url = reverse_lazy('users:login')
+   success_url = reverse_lazy('account:login')
    template_name = 'registration/signup.html'
 
 class MarketingView(TemplateView):
