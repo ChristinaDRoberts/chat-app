@@ -105,7 +105,7 @@ WSGI_APPLICATION = 'conf.wsgi.application'
 
 
 if os.environ.get('DATABASE_URL'):
-   DATABASES = {
+    DATABASES = {
        'default': dj_database_url.config(default=os.environ['DATABASE_URL']),
    }
 else:
@@ -157,5 +157,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 
-LOGIN_REDIRECT_URL = '/chat/ '
+LOGIN_REDIRECT_URL = 'chat/ '
 LOGOUT_REDIRECT_URL = '/login/'
