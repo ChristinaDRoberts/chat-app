@@ -2,11 +2,12 @@
 {%  load static %}
 
 {% block content %}
-  <h2>Sign up</h2>
+  <h2 class="signup-h2">Sign up</h2>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-      <button type="submit"><a href="{% url 'account:login' %}">Sign up</a></button>
+      <button  class="btn btn-secondary" type="submit"><a href="{% url 'account:login' %}">Sign up</a></button>
+      <button  class="btn btn-secondary" type="submit"><a href="{% url 'account:login' %}">Already Have An Account? </a></button>
 
   </form>
 {% endblock %}

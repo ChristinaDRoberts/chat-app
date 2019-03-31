@@ -4,12 +4,13 @@
 {% block title %}Login To The Chat !{% endblock %}
 
 {% block content %}
-  <h2>Login</h2>
+  <h2 class="login-h2">Login</h2>
   <form method="post">
     {% csrf_token %}
       <input type="hidden" value="{% url 'chat' %}" name='next'>
     {{ form.as_p }}
-    <button type="submit"> Login </button>
-  <button type="submit"><a href="{% url 'account:login' %}">Sign up</a></button>
+    <button class="btn btn-secondary" type="submit"> Login </button>
+
+  <button class="btn btn-secondary" type="submit"><a href="{% url 'account:signup' %}">Sign up</a></button>
   </form>
 {% endblock %}
