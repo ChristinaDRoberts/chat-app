@@ -1,31 +1,67 @@
+* {
+  box-sizing: border-box;
+}
 h1{
   font-size: 60px;
 }
 
-.whole{
-  background-color: lightgray;
-}
+
 .welcome-header{
   text-align: center;
-  border: 4px solid black;
-  background-image: linear-gradient(to right,  cyan, aquamarine);
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5%;
+
+
+  border-radius: 50px 50px;
+  background-image: linear-gradient(to right, rgba(41, 64, 138, 0.5),  whitesmoke, rgba(41, 64, 138, 0.5));
 }
 
+.user-message{
+  border-radius: 50px 50px;
+}
 
+#thePost{
+  margin-top: 3%;
+  margin-bottom: 4%;
+}
+
+.input-message{
+  width: 60%;
+  margin: 0 auto;
+}
+.actual-message{
+  font-size: 25px;
+  //font-style: italic;
+}
+
+p{
+  color: whitesmoke;
+}
 
 .each-message{
-background-image: linear-gradient(to right, rgba(255,0,0,0.5), rgba(255,50,0,0));
+  background-image: linear-gradient(to right, rgba(23,20,145,0.9), rgba(142,143,141,0.4), rgba(23,20,145,0.9));
+  border: 2px solid darkblue;
+  padding: 10px;
+  border-radius: 50px 20px;
+  margin: 10px;
 }
 
-.mainbox{
+.main{
     margin :0 auto;
-    padding-top: 50px;
+    padding-top: 25px;
+    background: url("https://cdn.pixabay.com/photo/2013/11/20/09/35/background-213649_1280.jpg") no-repeat;
+    background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+
+
+
 }
 
 
 #message_of_user{
     //width: 70%;
-  //display: inline-block;
+    display: block;
 }
 
 li{
@@ -34,13 +70,18 @@ li{
 
 p{
 
-  display: inline-block;
+  //display: inline-block;
   margin: 3%;
 }
 
 .user-timestamp{
   display: inline-block;
-  float: right;
+  //float: right;
+  //clear: left;
+}
+
+.clearfix {
+  overflow: auto;
 }
 //.add_message_form{
 //    border: 10px solid red;

@@ -50,8 +50,8 @@
         function showMessageItem(Message) {
             var $li = $('<li class="each-message"></li>');
             $li.append('<p class="actual-message">' + Message.text + '</p>');
-            $li.append('<p class="user-timestamp">' + Message.user.username +"----"+  Message.created + '</p>');
-            $li.append('<hr/>');
+            $li.append('<p class="user-timestamp ">' + Message.user.username +"----"+  Message.created + '</p>');
+            // $li.append('<hr/>');
 
             $('ul').prepend($li);
         }
