@@ -23,7 +23,7 @@ urlpatterns = [
     # makes the localhost:8000/admin route
     path('admin/', admin.site.urls),
     # prefixes all urls in accounts.url with "accounts" like localhost:8000/accounts
-    path('accounts/', include('account.urls')),
+    path('', include('account.urls')),
     path('api/', include("api.urls")),
     path('', include("chat.urls"))
 
