@@ -37,12 +37,6 @@ STATICFILES_DIRS = (
 )
 
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
-AWS_STORAGE_BUCKET_NAME ="chat27"
-AWS_S3_FILE_OVERWRITE= False
-AWS_DEFAULT_ACL =None  # DEFAULT WILL BE TO LOCKDOWN EVERYTHING
 
 
 # Quick-start development settings - unsuitable for production
@@ -72,6 +66,7 @@ INSTALLED_APPS = [
     'account',
     'rest_framework',
     'storages',
+
 
 ]
 
@@ -103,6 +98,14 @@ TEMPLATES = [
         },
     },
 ]
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME ="chat27"
+AWS_S3_FILE_OVERWRITE= False
+AWS_DEFAULT_ACL =None  # DEFAULT WILL BE TO LOCKDOWN EVERYTHING
+
 
 WSGI_APPLICATION = 'conf.wsgi.application'
 

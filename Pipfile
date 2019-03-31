@@ -15,6 +15,7 @@ djangorestframework = "*"
 humanize = "*"
 dj-database-url = "*"
 boto3 = "*"
+django-storages = "*"
 
 [requires]
 python_version = "3.7"
