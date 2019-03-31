@@ -1,12 +1,14 @@
 {% extends 'registration/base.html' %}
-{%  load static %}
+{% load static %}
 
 
 {% block content %}
-testing log in views
+    testing log in views
+    <div class="brochure col-8">
 
-<button type="submit"><a href="{% url 'account:login' %}">Log In Again</a></button>
-    <button type="submit"><a href="{% url 'account:signup' %}">Sign up A New Account</a></button>
+        <button type="submit"><a href="{% url 'account:login' %}">Log In Again</a></button>
+        <button type="submit"><a href="{% url 'account:signup' %}">Sign up A New Account</a></button>
+    <div>
 
 {% endblock %}
 
