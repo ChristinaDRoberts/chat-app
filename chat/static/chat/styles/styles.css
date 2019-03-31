@@ -6,6 +6,10 @@ h1 {
   font-size: 60px;
 }
 
+a {
+  color: whitesmoke;
+}
+
 .hero {
   position: relative;
   background: url("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80") no-repeat center center fixed;
@@ -28,10 +32,16 @@ h1 {
 
 .index-h2 {
   position: relative;
+  color: whitesmoke;
+  top: 15%;
+  left: 3%;
 }
 
 .brochure-buttons {
   position: relative;
+  top: 17%;
+  left: 3%;
+  color: whitesmoke;
 }
 
 .welcome-header {
