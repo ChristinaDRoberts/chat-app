@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 from os.path import normpath, join
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -107,7 +108,12 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
-
+if os.environ.get('DATABASE_URL'):
+   DATABASES = {
+       'default': dj_database_url.config(default=os.environ['DATABASE_URL']),
+   }
+else:
+    DATABASES = {
         'default': {
                'ENGINE': 'django.db.backends.postgresql',
                'NAME': 'chat',
