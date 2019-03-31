@@ -108,7 +108,7 @@ p {
 }
 
 .each-message {
-  background-image: linear-gradient(to right, rgba(23, 20, 145, 0.9), rgba(142, 143, 141, 0.4), rgba(23, 20, 145, 0.9));
+  background-image: linear-gradient(to right, #171491, rgba(142, 143, 141, 0.7), #171491);
   border: 2px solid darkblue;
   padding: 10px;
   border-radius: 50px 20px;
@@ -123,16 +123,6 @@ p {
   background-size: cover;
   /* or contain depending on what you want */
   background-position: center center;
-}
-
-.main:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  content: "";
 }
 
 #message_of_user {
