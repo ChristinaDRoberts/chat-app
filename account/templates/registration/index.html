@@ -3,12 +3,16 @@
 
 
 {% block content %}
-    testing log in views
+
     <div class="brochure col-8">
 
-        <button type="submit"><a href="{% url 'account:login' %}">Log In Again</a></button>
-        <button type="submit"><a href="{% url 'account:signup' %}">Sign up A New Account</a></button>
-    <div>
+    <h2 class="index-h2"> Carolina Chat Is Awaiting Your Presence </h2>
+
+    <div class="brochure-buttons"><
+        <button class="btn btn-info" type="submit"><a href="{% url 'account:login' %}">Log In Again</a></button>
+        <button class="btn btn-info" type="submit"><a href="{% url 'account:signup' %}">Sign up A New Account</a></button>
+    </div>
+    </div>
 
 {% endblock %}
 
